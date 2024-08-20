@@ -38,10 +38,30 @@
         <button class="stock-btn"><a href="kitchen_report.html">TOTAL ALL</a></button>
         <button class="stock-btn active"><a href="kitchen_report_mistake.html">MISTAKE</a></button>
         <div class="form-group">
-            <h3 class="datePicker" for="datePicker">เลือกวันที่:</h3>
-            <input type="date" class="form-control" id="datePicker">
-        </div>
+            <div class="row mb-3 align-items-center">
+                <div class="col-md-4">
+                    <h3 class="datePicker mb-0" for="startDate">ตั้งแต่วันที่:</h3>
+                </div>
+                <div class="col-md-4">
+                    <input type="date" class="form-control" id="startDate">
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <h3 class="datePicker mb-0" for="endDate">ถึงวันที่:</h3>
+                </div>
+                <div class="col-md-4">
+                    <input type="date" class="form-control" id="endDate">
+                </div>
+            </div>
+        </div>        
     </div>
+
+    <!-- Chart Section -->
+    <div class="container my-5">
+        <canvas id="salesChart" width="400" height="600"></canvas>
+    </div>
+
     <div class="container my-5">
         <table class="table table-striped" id="reportTable">
             <thead>
@@ -78,8 +98,18 @@
         </table>     
     </div>   
 
+    <!-- ปุ่มเลื่อนกลับไปที่กราฟ -->
+    <div class="container text-center my-5">
+        <button class="btn btn-primary" id="scrollToChart">กลับไปที่กราฟ</button>
+    </div>
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script src="kitchen-script.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js DataLabels plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- Custom JavaScript -->
+    <script src="kitchen-script.js"></script> <!-- แยกไฟล์ chart -->
 </body>
 </html>

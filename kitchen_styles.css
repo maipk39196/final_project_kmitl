@@ -114,12 +114,11 @@ th.kitchen-main-table-head, td.kitchen-main-table-field {
 }
 .datePicker {
     background-color: #FFD700;
-    width: fit-content;
+    width: 400px;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
     border-radius: 15px;
-    padding-left: 80px;
-    padding-right: 80px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 15px;
@@ -167,4 +166,16 @@ h5.card-title {
     background-color: #eeeeee;
     border-radius: 15px;
     padding: 25px;
+}
+.btn-primary {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+.btn-primary:hover {
+    background-color: #FFA500;
+    border-color: #FFA500;
+    color: white;
 }
